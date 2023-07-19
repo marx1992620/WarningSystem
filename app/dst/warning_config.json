@@ -7,16 +7,16 @@
     "cell_type": "CSC",
     "cell_id": 12,
     "cell_name": "CSC:12",
-    "mac_address": "a4:34:d9:80:7e:2e",
-    "ip": "192.168.137.10",
+    "mac_address": "XX:XX:XX:XX:XX:XX",
+    "ip": "XXX.XXX.XXX.XXX",
     "adc_daemon_port": 8081,
     "create_time": "2023-05-16T13:38:48.327000",
     "update_time": "2023-05-16T13:38:48.327000",
     "creator": [
-        "martin_cho@pegatroncorp.com"
+        "martin_cho@gmail.com"
     ],
     "inform_list": [
-        "martin_cho@pegatroncorp.com"
+        "martin_cho@gmail.com"
     ],
     "rules": [
         {
