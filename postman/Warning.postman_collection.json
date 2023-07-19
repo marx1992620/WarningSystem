@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "054b4b34-dec0-4811-a95d-7f8f21c5f476",
+		"name": "WarningSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "127.0.0.1:8077/update_warning",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"update_time\" : \"2023-05-16T13:38:48.327Z\",\r\n    \"create_time\" : \"2023-05-16T13:38:48.327Z\",\r\n    \"creator\": [\r\n        \"martin_cho@pegatroncorp.com\"\r\n    ],\r\n    \"inform_list\": [\r\n        \"martin_cho@pegatroncorp.com\"\r\n    ],\r\n    \"topic\" : \"/Devices/work_station_1/Digital\",\r\n    \"rule_name\" : \"test01\",\r\n    \"silence_interval\": 1,\r\n    \"rule\" : [\r\n        {\r\n            \"condition\" : [ \r\n                {\r\n                    \"compare_method\" : \"gte\",\r\n                    \"threshold\" : 4,\r\n                    \"template\" : [ \r\n                        0.5, \r\n                        0.5, \r\n                        0.5\r\n                    ],\r\n                    \"compute_method\" : \"sum\"\r\n                }\r\n            ],\r\n            \"warning_condition\" : \"or\",\r\n            \"monitor_key\" : [ \r\n                \"value\"\r\n            ],\r\n            \"data_type\" : \"array\"\r\n        }, \r\n        {\r\n            \"condition\" : [ \r\n                {\r\n                    \"compare_method\" : \"gte\",\r\n                    \"threshold\" : 4,\r\n                    \"template\" : [ \r\n                        0.1, \r\n                        0.2, \r\n                        0.3,\r\n                        0.4,\r\n                        0.5,\r\n                        0.6,\r\n                        0.7,\r\n                        0.8,\r\n                        0.9,\r\n                        1\r\n                    ],\r\n                    \"compute_method\" : \"max\"\r\n                }\r\n            ],\r\n            \"warning_condition\" : \"or\",\r\n            \"monitor_key\" : [ \r\n                \"value\"\r\n            ]\r\n        }\r\n    ]\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8077/update_warning",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8077",
+					"path": [
+						"update_warning"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8077/create_warning",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n    \"product\" : \"Test\",\r\n    \"project\" : \"YOKOHAMA\",\r\n    \"factory\" : \"F03\",\r\n    \"floor\" : \"3FTC\",\r\n    \"line\" : \"03\",\r\n    \"cell_type\" : \"CSC\",\r\n    \"cell_id\" : 12,\r\n    \"mac_address\" : \"a4:34:d9:80:7e:2e\",\r\n    \"ip\" : \"192.168.137.10\",\r\n    \"update_time\" : \"2023-05-16T13:38:48.327Z\",\r\n    \"create_time\" : \"2023-05-16T13:38:48.327Z\",\r\n    \"creator\": [\r\n        \"martin_cho@pegatroncorp.com\"\r\n    ],\r\n    \"inform_list\": [\r\n        \"martin_cho@pegatroncorp.com\"\r\n    ],\r\n    \"adc_daemon_port\" : 8081,\r\n    \"cell_name\" : \"CSC:12\",\r\n    \"topic\" : \"/Devices/work_station_1/Digital\",\r\n    \"rule_name\" : \"test01\",\r\n    \"rule\" : [ \r\n        {\r\n            \"condition\" : [ \r\n                {\r\n                    \"compare_method\" : \"gte\",\r\n                    \"threshold\" : 3,\r\n                    \"template\" : [ \r\n                        0.5, \r\n                        0.5, \r\n                        0.5\r\n                    ],\r\n                    \"compute_method\" : \"sum\"\r\n                }, \r\n                {\r\n                    \"compare_method\" : \"eq\",\r\n                    \"threshold\" : 2\r\n                }\r\n            ],\r\n            \"warning_condition\" : \"or\",\r\n            \"monitor_key\" : [ \r\n                \"value\"\r\n            ],\r\n            \"data_type\" : \"array\"\r\n        }, \r\n        {\r\n            \"condition\" : [ \r\n                {\r\n                    \"compare_method\" : \"gte\",\r\n                    \"threshold\" : 1.5,\r\n                    \"template\" : [ \r\n                        0.5, \r\n                        0.5, \r\n                        0.5\r\n                    ],\r\n                    \"compute_method\" : \"mean\"\r\n                }, \r\n                {\r\n                    \"compare_method\" : \"eq\",\r\n                    \"threshold\" : 0\r\n                }\r\n            ],\r\n            \"warning_condition\" : \"and\",\r\n            \"monitor_key\" : [ \r\n                \"value\"\r\n            ],\r\n            \"data_type\" : \"array\"\r\n        }\r\n    ]\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8077/create_warning",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8077",
+					"path": [
+						"create_warning"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8077/delete_warning",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"rule_name\" : \"test01\"\r\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8500/delete_warning",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8500",
+					"path": [
+						"delete_warning"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "172.28.146.46:8013/get_warning_config",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "172.28.146.46:8013/api/warning_config/a4:34:d9:80:7e:2e",
+					"host": [
+						"172",
+						"28",
+						"146",
+						"46"
+					],
+					"port": "8013",
+					"path": [
+						"api",
+						"warning_config",
+						"a4:34:d9:80:7e:2e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

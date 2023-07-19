@@ -1,0 +1,18 @@
+{
+    "cell_id": null,
+    "cell_type": null,
+    "connect_to_django": true,
+    "connect_to_ui": true,
+    "connection": true,
+    "daemon_status": "Initial status",
+    "factory": null,
+    "floor": null,
+    "ip": "10.195.149.15",
+    "line": null,
+    "mac_address": "a4:34:d9:80:7e:2e",
+    "product": null,
+    "project": null,
+    "registered_status": false,
+    "update_overlay_status": "",
+    "update_time": null
+}

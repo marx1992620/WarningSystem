@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+gmqtt = "*"
+netifaces = "*"
+aiohttp = "*"
+confluent-kafka = "*"
+pywin32 = "*"
+requests = "*"
+apscheduler = "*"
+asyncio = "*"
+pyinstaller = "*"
+uvicorn = "*"
+fastapi = "*"
+python-multipart = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

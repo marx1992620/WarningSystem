@@ -1,0 +1,90 @@
+{
+    "product": "Test",
+    "project": "YOKOHAMA",
+    "factory": "F03",
+    "floor": "3FTC",
+    "line": "03",
+    "cell_type": "CSC",
+    "cell_id": 12,
+    "cell_name": "CSC:12",
+    "mac_address": "a4:34:d9:80:7e:2e",
+    "ip": "192.168.137.10",
+    "adc_daemon_port": 8081,
+    "create_time": "2023-05-16T13:38:48.327000",
+    "update_time": "2023-05-16T13:38:48.327000",
+    "creator": [
+        "martin_cho@pegatroncorp.com"
+    ],
+    "inform_list": [
+        "martin_cho@pegatroncorp.com"
+    ],
+    "rules": [
+        {
+            "condition": [
+                {
+                    "compare_method": "lte",
+                    "threshold": 100
+                },
+                {
+                    "compare_method": "gt",
+                    "threshold": 80
+                }
+            ],
+            "warning_condition": "and",
+            "monitor_key": [
+                "value",
+                "pulse"
+            ],
+            "topic": "/Devices/inside_transfer_2/PWM",
+            "rule_name": "test02",
+            "silence_interval": 1
+        },
+        {
+            "condition": [
+                {
+                    "compare_method": "eq",
+                    "threshold": 0
+                }
+            ],
+            "warning_condition": "or",
+            "monitor_key": [
+                "value",
+                "pulse"
+            ],
+            "topic": "/Devices/inside_transfer_2/PWM",
+            "rule_name": "test02",
+            "silence_interval": 1
+        },
+        {
+            "condition": [
+                {
+                    "compare_method": "gte",
+                    "threshold": 4,
+                    "template": [
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "compute_method": "sum"
+                },
+                {
+                    "compare_method": "eq",
+                    "threshold": 0
+                }
+            ],
+            "warning_condition": "and",
+            "monitor_key": [
+                "value"
+            ],
+            "data_type": "array",
+            "topic": "/Devices/work_station_1/Digital",
+            "rule_name": "test01",
+            "silence_interval": 1
+        }
+    ],
+    "subscribed": [
+        "/Devices/inside_transfer_2/PWM",
+        "/Devices/work_station_1/Digital"
+    ],
+    "connection": false
+}
