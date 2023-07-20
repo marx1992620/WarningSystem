@@ -2,7 +2,7 @@
 Customized Warning System for MQTT realtime data
 
 <b> Description: </b> <br>
-The warning system is a critical component designed to monitor real-time data against user-defined configurations stored in MongoDB. It subscribes to MQTT topics to observe data and promptly sends warnings to the UI web when data exceeds predefined thresholds. Simultaneously, warning records are stored in MongoDB for historical tracking and analysis. This system ensures proactive alerts and enables quick responses to potential risks and critical events.
+The warning system is a critical component that monitors real-time data using user-defined configurations stored in MongoDB. It subscribes to MQTT topics to process real-time data and sends warnings to Django. If thresholds are exceeded, Django produces warnings to Kafka. Simultaneously, the UI web application consumes data from Kafka to display real-time warnings. MongoDB stores the warning data for historical tracking and analysis, ensuring proactive alerts and quick responses to potential risks and critical events.
 
 <b> 1. System diagram: </b><br>
 The interaction among the warning system, MQTT broker, MongoDB, Django, UI web, and Kafka can be described as follows:<br><br>
