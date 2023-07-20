@@ -1,14 +1,14 @@
 {
     "product": "Test",
-    "project": "YOKOHAMA",
-    "factory": "F03",
-    "floor": "3FTC",
-    "line": "03",
-    "cell_type": "CSC",
-    "cell_id": 12,
-    "cell_name": "CSC:12",
-    "mac_address": "XX:XX:XX:XX:XX:XX",
-    "ip": "XXX.XXX.XXX.XXX",
+    "project": "Test",
+    "factory": "Test",
+    "floor": "Test",
+    "line": "Test",
+    "cell_type": "Test",
+    "cell_id": 1,
+    "cell_name": "Test:1",
+    "mac_address": "a4:34:d9:80:7e:2e",
+    "ip": "192.168.137.10",
     "adc_daemon_port": 8081,
     "create_time": "2023-05-16T13:38:48.327000",
     "update_time": "2023-05-16T13:38:48.327000",
@@ -36,7 +36,7 @@
                 "pulse"
             ],
             "topic": "/Devices/inside_transfer_2/PWM",
-            "rule_name": "test02",
+            "rule_name": "rule02",
             "silence_interval": 1
         },
         {
@@ -52,7 +52,7 @@
                 "pulse"
             ],
             "topic": "/Devices/inside_transfer_2/PWM",
-            "rule_name": "test02",
+            "rule_name": "rule02",
             "silence_interval": 1
         },
         {
@@ -78,7 +78,7 @@
             ],
             "data_type": "array",
             "topic": "/Devices/work_station_1/Digital",
-            "rule_name": "test01",
+            "rule_name": "rule01",
             "silence_interval": 1
         }
     ],
